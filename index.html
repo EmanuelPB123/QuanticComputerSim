@@ -1,0 +1,189 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial: Computación Cuántica IBM - Aplicaciones Prácticas</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .sun-icon {
+      display: none;
+    }
+    [data-theme="dark"] .moon-icon {
+      display: none;
+    }
+    [data-theme="dark"] .sun-icon {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tutorial de Computación Cuántica</h1>
+    
+    <div class="left-panel">
+      <div class="intro-section">
+        <h2>¿Qué es la Computación Cuántica?</h2>
+        <p>La computación cuántica es una tecnología que usa las leyes de la física cuántica para resolver problemas que serían imposibles para computadoras tradicionales.</p>
+      </div>
+
+      <div class="applications-section">
+        <h3>Aplicaciones en Logística</h3>
+        <ul>
+          <li><strong>Optimización de Rutas:</strong> Encontrar la mejor ruta para entregas</li>
+          <li><strong>Gestión de Inventario:</strong> Optimizar el almacenamiento</li>
+          <li><strong>Planificación de Recursos:</strong> Mejorar la asignación</li>
+        </ul>
+      </div>
+
+      <div class="simulator-limitations">
+        <h3>Limitaciones del Simulador</h3>
+        <p><strong>Importante:</strong> Este es un simulador educativo básico.</p>
+        <ul>
+          <li>Acceso a hardware cuántico real necesario para casos reales</li>
+          <li>Algoritmos cuánticos específicos requeridos</li>
+          <li>Consultar con IBM Quantum para casos reales</li>
+        </ul>
+      </div>
+
+      <div class="gate-palette">
+        <h3>Compuertas Cuánticas</h3>
+        <div class="gates-container">
+          <!-- Single-qubit gates -->
+          <div class="gate-section">
+            <div class="gate" data-gate="H" draggable="true">H</div>
+            <div class="gate-explanation">
+              <h4>Hadamard (H)</h4>
+              <p>Crea superposición cuántica</p>
+            </div>
+          </div>
+          <div class="gate-section">
+            <div class="gate" data-gate="X" draggable="true">X</div>
+            <div class="gate-explanation">
+              <h4>Pauli-X</h4>
+              <p>NOT cuántico (rotación π)</p>
+            </div>
+          </div>
+          <div class="gate-section">
+            <div class="gate" data-gate="Y" draggable="true">Y</div>
+            <div class="gate-explanation">
+              <h4>Pauli-Y</h4>
+              <p>Rotación eje Y (π)</p>
+            </div>
+          </div>
+          <div class="gate-section">
+            <div class="gate" data-gate="Z" draggable="true">Z</div>
+            <div class="gate-explanation">
+              <h4>Pauli-Z</h4>
+              <p>Cambio de fase (π)</p>
+            </div>
+          </div>
+          <div class="gate-section">
+            <div class="gate" data-gate="S" draggable="true">S</div>
+            <div class="gate-explanation">
+              <h4>Phase (S)</h4>
+              <p>Rotación fase π/2</p>
+            </div>
+          </div>
+          <div class="gate-section">
+            <div class="gate" data-gate="T" draggable="true">T</div>
+            <div class="gate-explanation">
+              <h4>T Gate</h4>
+              <p>Rotación fase π/4</p>
+            </div>
+          </div>
+          <div class="gate-section">
+            <div class="gate" data-gate="Rx" draggable="true">Rx</div>
+            <div class="gate-explanation">
+              <h4>Rx(θ)</h4>
+              <p>Rotación X paramétrica</p>
+            </div>
+          </div>
+          <div class="gate-section">
+            <div class="gate" data-gate="Ry" draggable="true">Ry</div>
+            <div class="gate-explanation">
+              <h4>Ry(θ)</h4>
+              <p>Rotación Y paramétrica</p>
+            </div>
+          </div>
+          <div class="gate-section">
+            <div class="gate" data-gate="Rz" draggable="true">Rz</div>
+            <div class="gate-explanation">
+              <h4>Rz(θ)</h4>
+              <p>Rotación Z paramétrica</p>
+            </div>
+          </div>
+          <!-- Multi-qubit gates -->
+          <div class="gate-section">
+            <div class="gate" data-gate="CNOT" draggable="true">CX</div>
+            <div class="gate-explanation">
+              <h4>CNOT</h4>
+              <p>NOT controlado</p>
+            </div>
+          </div>
+          <div class="gate-section">
+            <div class="gate" data-gate="CZ" draggable="true">CZ</div>
+            <div class="gate-explanation">
+              <h4>CZ</h4>
+              <p>Z controlado</p>
+            </div>
+          </div>
+          <div class="gate-section">
+            <div class="gate" data-gate="SWAP" draggable="true">SW</div>
+            <div class="gate-explanation">
+              <h4>SWAP</h4>
+              <p>Intercambio de qubits</p>
+            </div>
+          </div>
+          <div class="gate-section">
+            <div class="gate" data-gate="CCX" draggable="true">CCX</div>
+            <div class="gate-explanation">
+              <h4>Toffoli</h4>
+              <p>CNOT doblemente controlado</p>
+            </div>
+          </div>
+          <div class="gate-section">
+            <div class="gate" data-gate="M" draggable="true">M</div>
+            <div class="gate-explanation">
+              <h4>Medición</h4>
+              <p>Mide el estado del qubit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-panel">
+      <div class="quantum-circuit">
+        <div class="controls">
+          <div class="control-group">
+            <button id="addQubit">Añadir Qubit</button>
+          </div>
+          <div class="control-group">
+            <button id="removeQubit">Eliminar Qubit</button>
+          </div>
+          <div class="control-group">
+            <button id="reset">Reiniciar</button>
+          </div>
+          <div class="control-group">
+            <button id="run">Ejecutar Circuito</button>
+          </div>
+        </div>
+        
+        <div id="circuit-container">
+          <!-- Los qubits se añadirán aquí dinámicamente -->
+        </div>
+      </div>
+
+      <div class="results">
+        <h3>Resultados de Optimización Logística</h3>
+        <div class="results-explanation">
+          <p><strong>Interpretación:</strong> Las rutas muestran soluciones optimizadas, con probabilidades que indican la calidad de cada solución.</p>
+        </div>
+        <div id="visualization"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script type="module" src="quantum.js"></script>
+</body>
+</html>
